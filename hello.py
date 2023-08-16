@@ -29,12 +29,15 @@ import os
 
 current_language = os.getenv("LANG", "pt_BR")[:5] #Fatia valor da variavel do 0 À 5
 
-msg = "Hello, World!"
+msg = {
+    "en_US": "Hello, World!",
+    "pt_BR": "Olá, Mundo!",
+    "it_IT": "Ciao, Mondo!",
+    "es_SP": "Hola, Mundo!",
+    "fr_FR": "Bonjour, Monde!",
+}
 
-if current_language == "pt_BR":
-    msg = "Olá, Mundo!"
-elif current_language == "it_IT":
-    msg = "Ciao, Mondo!" 
-elif current_language == "es_SP":
-    msg = "Hola, Mondo!"       
-print(msg)
+# sets (hash table) - 0(1) - constante
+# dicts( hash table)
+       
+print(msg[current_language])
